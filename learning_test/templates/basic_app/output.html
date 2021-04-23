@@ -1,0 +1,75 @@
+{% extends "basic_app/base.html" %}
+
+{% load static%}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static "basic_app/css/output.css" %}"/>
+
+
+
+<div class="jumbotron">
+
+    <h1>This all are service names and their project ids</h1>
+
+    
+
+
+
+    <div class = "django">
+        {% if servicename %}
+
+        {{ results }}
+
+        <table>
+            <thead>
+                <th>Service id</th>
+                
+                <th>service</th>
+                
+                <th>communication</th>
+                
+                <th>things</th>
+                
+                <th>diraction</th>
+
+                <th>child </th>
+            </thead>
+
+            {% for service in servicename %}
+
+            <tr>
+                <td>{{ service.auto_project_id }}</td>
+                
+                <td>{{ service.servicename }}</td>
+                
+                <td>{{ service.communication_text }}</td>
+                
+                <td>{{ service.things_text }}</td>
+             
+                <td>{{ service.direction}}</td>
+
+                <td><a href="{% url 'basic_app:update' service.auto_project_id %}">update</a>{{ service.child }}</td>
+
+
+                
+    
+            </tr>
+    
+            {% endfor %}
+        </table>
+
+        {% else %}
+
+        <p>no service deatails</p>
+
+        {% endif %}
+
+
+
+
+    </div>
+</div>
+
+{% endblock %}

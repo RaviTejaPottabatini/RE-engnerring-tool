@@ -1,0 +1,20 @@
+WARNING 2020-07-11 23:14:36,088 log 8296 9240 Not Found: /favicon.ico
+WARNING 2020-07-11 23:14:36,088 basehttp 8296 9240 "GET /favicon.ico HTTP/1.1" 404 2582
+WARNING 2020-07-11 23:15:13,342 log 8296 9240 Not Found: /nvrnrw
+WARNING 2020-07-11 23:15:13,343 basehttp 8296 9240 "GET /nvrnrw HTTP/1.1" 404 2567
+ERROR 2020-07-11 23:32:27,140 log 6352 9808 Internal Server Error: /logs/
+Traceback (most recent call last):
+  File "C:\Users\Login\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Login\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Login\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Login\Desktop\RaviTeja\pratice\Django\learning_test\basic_app\views.py", line 48, in logs
+    return render(request, 'basic_app/logs.html', context)
+UnboundLocalError: local variable 'context' referenced before assignment
+ERROR 2020-07-11 23:32:27,142 basehttp 6352 9808 "GET /logs/ HTTP/1.1" 500 78316
+WARNING 2020-07-12 12:29:03,790 log 3988 1660 Not Found: /favicon.ico
+WARNING 2020-07-12 12:29:03,803 basehttp 3988 1660 "GET /favicon.ico HTTP/1.1" 404 2580
+WARNING 2020-07-15 10:15:07,222 log 3364 6396 Not Found: /favicon.ico
+WARNING 2020-07-15 10:15:07,231 basehttp 3364 6396 "GET /favicon.ico HTTP/1.1" 404 2580
